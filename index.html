@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Clock — Jam Dunia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg>
+      </div>
+      <div>
+        <h1>World Clock</h1>
+        <p>Jam Dunia &middot; Zona Waktu Internasional</p>
+      </div>
+    </div>
+    <div class="local">
+      <div id="localTime" class="local-time">--:--</div>
+      <div id="localDate" class="local-date">&nbsp;</div>
+    </div>
+  </header>
+  <main id="grid" class="grid"></main>
+  <footer class="foot">Waktu lokal perangkat &middot; diperbarui setiap detik</footer>
+  <script src="script.js"></script>
+</body>
+</html>
