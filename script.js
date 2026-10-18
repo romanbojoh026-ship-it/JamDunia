@@ -27,7 +27,6 @@ function tick(){
     r.h.setAttribute('transform',`rotate(${(H%12)*30+M*.5} 100 100)`);
     r.m.setAttribute('transform',`rotate(${M*6+S*.1} 100 100)`);
     r.s.setAttribute('transform',`rotate(${S*6} 100 100)`);
-    r.dig.textContent=`${p.hour}:${p.minute}`;
     r.meta.textContent=`${p.weekday}, ${p.day} ${p.month} · ${r.abbr}`;
     const day=H>=6&&H<18;r.tag.className='tag '+(day?'day':'night');r.tag.textContent=day?'Siang':'Malam';});
   document.getElementById('localTime').textContent=now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
