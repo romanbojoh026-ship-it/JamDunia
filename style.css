@@ -1,4 +1,4 @@
-:root{--background-image: url('BG.png');--bg2:#00474b;--line:rgba(255,255,255,.12);--text:#fff;--muted:rgba(255,255,255,.62);--green:#2ee36a;--red:#ff4d4d;}
+:root{--bg:#003a3d;--bg2:#00474b;--line:rgba(255,255,255,.12);--text:#fff;--muted:rgba(255,255,255,.62);--green:#2ee36a;--red:#ff4d4d;}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{height:100vh;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;
