@@ -18,7 +18,7 @@ const refs=cities.map(([name,tz,abbr])=>{
   card.appendChild(svg);
   card.insertAdjacentHTML('beforeend',`<div class="info"><div><div class="city">${name}</div><div class="meta"></div></div><div class="dig"></div><span class="tag"></span></div></div>`);
   grid.appendChild(card);
-  return {tz,abbr,h,m,s,meta:card.querySelector('.meta'),dig:card.querySelector('.dig-time'),tag:card.querySelector('.tag')};
+  return {tz,abbr,h,m,s,meta:card.querySelector('.meta'),tag:card.querySelector('.tag')};
 });
 function parts(d,tz){const o={};new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23',weekday:'short',day:'2-digit',month:'short',year:'numeric'}).formatToParts(d).forEach(p=>o[p.type]=p.value);return o}
 function tick(){
