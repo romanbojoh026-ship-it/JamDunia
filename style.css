@@ -23,10 +23,10 @@ h1{font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(22px,4.5v
 .hand-s{stroke:var(--red);stroke-linecap:round}
 .pin{fill:var(--red)}
 .info{width:100%;display:flex;justify-content:space-between;align-items:flex-end;margin-top:1.5vmin;padding-top:1.5vmin;gap:8px;border-top:1px solid var(--line)}
-.city{font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(14px,2.6vmin,25px);letter-spacing:.02em;text-transform:uppercase}
+.city{font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(14px,1.6vmin,25px);letter-spacing:.02em;text-transform:uppercase}
 .meta{color:var(--muted);font-size:clamp(11px,1.6vmin,24px);margin-top:2px}
 .dig{text-align:right}
-.dig-time{font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(16px,3vmin,46px);font-variant-numeric:tabular-nums}
+.dig-time{font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(16px,2vmin,46px);font-variant-numeric:tabular-nums}
 .tag{display:inline-block;font-size:clamp(10px,1.4vmin,20px);font-weight:600;padding:2px 8px;border-radius:999px;margin-top:4px}
 .tag.day{color:var(--green);background:rgba(46,227,106,.12)}
 .tag.night{color:#9fc7ff;background:rgba(159,199,255,.12)}
