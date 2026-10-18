@@ -18,7 +18,7 @@ const refs=cities.map(([name,tz,abbr])=>{
   card.appendChild(svg);
   card.insertAdjacentHTML('beforeend',`<div class="info"><div><div class="city">${name}</div><div class="meta"></div></div><div class="dig"></div><span class="tag"></span></div></div>`);
   grid.appendChild(card);
-  return {tz,abbr,h,m,s,meta:card.querySelector('.meta'),tag:card.querySelector('.tag')};
+  return {tz,abbr,h,m,s,meta:card.querySelector('.meta'),dig:card.querySelector('.dig'),tag:card.querySelector('.tag')};
 });
 function parts(d,tz){const o={};new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23',weekday:'short',day:'2-digit',month:'short',year:'numeric'}).formatToParts(d).forEach(p=>o[p.type]=p.value);return o}
 function tick(){
@@ -28,8 +28,11 @@ function tick(){
     r.m.setAttribute('transform',`rotate(${M*6+S*.1} 100 100)`);
     r.s.setAttribute('transform',`rotate(${S*6} 100 100)`);
     r.meta.textContent=`${p.weekday}, ${p.day} ${p.month} · ${r.abbr}`;
+    r.dig.innerHTML=`<div class="dig-time">${p.hour}:${p.minute}:${p.second}</div>`;
     const day=H>=6&&H<18;r.tag.className='tag '+(day?'day':'night');r.tag.textContent=day?'Siang':'Malam';});
-  document.getElementById('localTime').textContent=now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  document.getElementById('localDate').textContent=now.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+  const localTimeEl = document.getElementById('localTime');
+  if (localTimeEl) localTimeEl.textContent=now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const localDateEl = document.getElementById('localDate');
+  if (localDateEl) localDateEl.textContent=now.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
 }
 tick();setInterval(tick,1000);
