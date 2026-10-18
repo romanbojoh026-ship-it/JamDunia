@@ -16,7 +16,7 @@ const refs=cities.map(([name,tz,abbr])=>{
   const s=el('line',{x1:100,y1:118,x2:100,y2:26,class:'hand-s','stroke-width':1.6},svg);
   el('circle',{cx:100,cy:100,r:4.5,class:'pin'},svg);
   card.appendChild(svg);
-  card.insertAdjacentHTML('beforeend',`<div class="info"><div><div class="city">${name}</div><div class="meta"></div></div><div class="dig"><div class="dig-time"></div><span class="tag"></span></div></div>`);
+  card.insertAdjacentHTML('beforeend',`<div class="info"><div><div class="city">${name}</div><div class="meta"></div></div><div class="dig"></div><span class="tag"></span></div></div>`);
   grid.appendChild(card);
   return {tz,abbr,h,m,s,meta:card.querySelector('.meta'),dig:card.querySelector('.dig-time'),tag:card.querySelector('.tag')};
 });
